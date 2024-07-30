@@ -22,6 +22,7 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven { url "https://jitpack.io" }
 }
 
 dependencyManagement {
@@ -45,9 +46,9 @@ tasks.named('test') {
 publishing {
 	publications {
 		maven(MavenPublication) {
-			groupId = 'com.T82.common_exception'
-			artifactId = 'common_exception'
-			version = '0.0.1'
+			groupId = 'com.T82.common_exception' as Publication
+			artifactId = 'common_exception' as Publication
+			version = '0.0.1' as Publication
 
 			from components.java
 		}

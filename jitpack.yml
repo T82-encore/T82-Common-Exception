@@ -6,8 +6,6 @@ before_install:
   - sdk use java 17.0.2-zulu
   - sdk install maven
   - mvn -v
-  - chmod +x ./gradlew
 
 install:
-  - ./gradlew clean build
-  - ./gradlew build publishToMavenLocal --stacktrace
+  - ./gradlew build publishToMavenLocal
