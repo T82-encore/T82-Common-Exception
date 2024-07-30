@@ -48,7 +48,7 @@ publishing {
 		maven(MavenPublication) {
 			groupId = 'com.T82.common_exception'
 			artifactId = 'common_exception'
-			version = '0.0.1'
+			version = '0.6.3'
 
 			from components.java
 		}
