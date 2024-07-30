@@ -47,7 +47,7 @@ tasks.named('test') {
 
 publishing {
 	publications {
-		release(MavenPublication) {
+		maven(MavenPublication) {
 			groupId = 'com.T82.common_exception'
 			artifactId = 'common-exception'
 			version = '0.6.7'
