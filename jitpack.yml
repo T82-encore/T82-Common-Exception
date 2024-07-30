@@ -9,4 +9,4 @@ before_install:
   - chmod +x ./gradlew
 
 install:
-  - ./gradlew build publishToMavenLocal
+  - ./gradlew build publishToMavenLocal --stacktrace
