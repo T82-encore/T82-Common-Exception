@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.T82'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 
 java {
 	toolchain {
@@ -48,7 +48,7 @@ publishing {
 		maven(MavenPublication) {
 			groupId = 'com.T82.common_exception'
 			artifactId = 'common_exception'
-			version = '0.6.3'
+			version = '0.6.4'
 
 			from components.java
 		}
