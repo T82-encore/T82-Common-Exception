@@ -7,9 +7,8 @@ plugins {
 	id 'maven-publish'
 }
 
-group = 'com.T82'
-version = '0.6.7'
 
+apply plugin: 'maven-publish'
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
@@ -48,10 +47,9 @@ tasks.named('test') {
 publishing {
 	publications {
 		maven(MavenPublication) {
-			groupId = 'com.T82-encore'
-			artifactId = 'T82-Common-Exception'
-			version = '0.6.13'
-
+			groupId = 'com.T82'
+			artifactId = 'common-exception'
+			version = '0.6.7'
 			from components.java
 		}
 	}
