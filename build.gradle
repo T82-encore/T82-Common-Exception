@@ -46,9 +46,9 @@ tasks.named('test') {
 publishing {
 	publications {
 		maven(MavenPublication) {
-			groupId = 'com.T82.common_exception'
-			artifactId = 'common_exception'
-			version = '0.6.4'
+			groupId = 'com.T82.common_exception' as Publication
+			artifactId = 'common_exception' as Publication
+			version = '0.6.4' as Publication
 
 			from components.java
 		}
