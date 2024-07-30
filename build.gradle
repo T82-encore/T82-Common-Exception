@@ -7,7 +7,7 @@ plugins {
 	id 'maven-publish'
 }
 
-archivesBaseName = 'common-exception'
+group = 'com.T82'
 version = '0.6.7'
 
 java {
@@ -47,10 +47,12 @@ tasks.named('test') {
 
 publishing {
 	publications {
-		maven(MavenPublication) {
-			artifact("build/libs/${archivesBaseName}-${version}.jar") {
-				extension 'jar'
-			}
+		release(MavenPublication) {
+			groupId = 'com.T82.common_exception'
+			artifactId = 'common-exception'
+			version = '0.6.7'
+
+			from components.java
 		}
 	}
 }
