@@ -36,6 +36,9 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+tasks.withType(GenerateModuleMetadata).configureEach {
+}
+
 publishing {
 	publications {
 		maven(MavenPublication) {
