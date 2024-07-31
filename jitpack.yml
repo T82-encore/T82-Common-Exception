@@ -9,6 +9,6 @@ before_install:
   - chmod +x ./gradlew
 
 install:
-  - ./gradlew clean build publishToMavenLocal
-  - ./gradlew components
+  - ./gradlew clean build --warning-mode all
+  - ./gradlew components --warning-mode all
 
