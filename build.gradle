@@ -36,7 +36,8 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-tasks.withType(GenerateModuleMetadata).configureEach {
+tasks.withType(GenerateModuleMetadata) {
+	enabled = false
 }
 
 publishing {
