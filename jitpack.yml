@@ -6,9 +6,9 @@ before_install:
   - sdk use java 17.0.2-zulu
   - sdk install maven
   - mvn -v
-  - chmod +x ./gradlew
+#  - chmod +x ./gradlew
 
 install:
-  - ./gradlew clean build --warning-mode all
-  - ./gradlew components --warning-mode all
+  - ./gradlew build publishToMavenLocal
+#  - ./gradlew components --warning-mode all
 
