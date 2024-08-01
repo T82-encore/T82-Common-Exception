@@ -2,7 +2,6 @@ package com.T82.common_exception.aspect;
 
 import com.T82.common_exception.annotation.HandleCustomException;
 import com.T82.common_exception.exception.CustomException;
-import com.T82.common_exception.response.ErrorResponseEntity;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
