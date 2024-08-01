@@ -12,19 +12,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomExceptionAspect {
 
-    @Around("@annotation(handleCustomException)")
-    public Object handleCustomExceptionAdvice(ProceedingJoinPoint joinPoint, HandleCustomException handleCustomException) throws Throwable {
+    @Around("@annotation(handleException)")
+    public Object handleException(ProceedingJoinPoint joinPoint, HandleCustomException handleException) throws Throwable {
         try {
             return joinPoint.proceed();
-        } catch (Throwable ex) {
-            Class<? extends Throwable> exceptionClass = handleCustomException.value();
-            if (exceptionClass.isAssignableFrom(ex.getClass())) {
-                if (ex instanceof CustomException) {
-                    CustomException customException = (CustomException) ex;
-                    return ErrorResponseEntity.toResponseEntity(customException.getErrorCode());
-                }
-            }
-            throw ex;
+        } catch (Exception e) {
+            throw new CustomException(handleException.value());
         }
     }
 }
