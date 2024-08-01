@@ -16,9 +16,13 @@ public class CustomExceptionAspect {
     public Object handleCustomExceptionAdvice(ProceedingJoinPoint joinPoint, HandleCustomException handleCustomException) throws Throwable {
         try {
             return joinPoint.proceed();
-        } catch (CustomException ex) {
-            if (handleCustomException.value().isAssignableFrom(ex.getClass())) {
-                return ErrorResponseEntity.toResponseEntity(ex.getErrorCode());
+        } catch (Throwable ex) {
+            Class<? extends Throwable> exceptionClass = handleCustomException.value();
+            if (exceptionClass.isAssignableFrom(ex.getClass())) {
+                if (ex instanceof CustomException) {
+                    CustomException customException = (CustomException) ex;
+                    return ErrorResponseEntity.toResponseEntity(customException.getErrorCode());
+                }
             }
             throw ex;
         }
