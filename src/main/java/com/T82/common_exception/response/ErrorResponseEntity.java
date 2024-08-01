@@ -1,6 +1,6 @@
-package com.T82.common_exception.dto;
+package com.T82.common_exception.response;
 
-import com.T82.common_exception.enums.ErrorCode;
+import com.T82.common_exception.exception.ErrorCode;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;

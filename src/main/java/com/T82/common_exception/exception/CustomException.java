@@ -1,6 +1,5 @@
-package com.T82.common_exception.custom;
+package com.T82.common_exception.exception;
 
-import com.T82.common_exception.enums.ErrorCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package com.T82.common_exception.enums;
+package com.T82.common_exception.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
