@@ -21,7 +21,7 @@ public class CustomExceptionAspect {
             log.error("ERROR : {} ({})", e.getErrorCode().getMessage(), e.getErrorCode().getCode(), e);
             throw e;
         } catch (Exception e) {
-            CustomException customException = new CustomException(handleException.value());
+            CustomException customException = new CustomException(handleException.value(), e);
             log.error("ERROR : {} ({})", customException.getErrorCode().getMessage(), customException.getErrorCode().getCode(), e);
             throw customException;
         }
