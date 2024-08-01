@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class CustomExceptionAspect {
 
-
     @Around("@annotation(handleException)")
     public Object handleException(ProceedingJoinPoint joinPoint, HandleCustomException handleException) throws Throwable {
         try {
