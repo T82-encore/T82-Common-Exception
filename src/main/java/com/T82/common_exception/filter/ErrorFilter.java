@@ -20,5 +20,6 @@ public class ErrorFilter extends OncePerRequestFilter {
         log.error("**************test*************");
         log.error("**************test*************");
         log.error("**************test*************");
+        filterChain.doFilter(request, response);
     }
 }
