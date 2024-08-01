@@ -18,11 +18,11 @@ public class CustomExceptionAspect {
         try {
             return joinPoint.proceed();
         } catch (CustomException e) {
-            log.error("ERROR : {} ({})", e.getErrorCode().getMessage(), e.getErrorCode().getCode(), e);
+            log.error("ERROR : {} ({})", e.getErrorCode().getMessage(), e.getErrorCode().getCode());
             throw e;
         } catch (Exception e) {
             CustomException customException = new CustomException(handleException.value(), e);
-            log.error("ERROR : {} ({})", customException.getErrorCode().getMessage(), customException.getErrorCode().getCode(), e);
+            log.error("ERROR : {} ({})", customException.getErrorCode().getMessage(), customException.getErrorCode().getCode());
             throw customException;
         }
     }
