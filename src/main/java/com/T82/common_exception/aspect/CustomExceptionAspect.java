@@ -16,9 +16,6 @@ public class CustomExceptionAspect {
     public Object handleException(ProceedingJoinPoint joinPoint, CustomException handleException) throws Throwable {
         try {
             return joinPoint.proceed();
-        } catch (com.T82.common_exception.exception.CustomException e) {
-            log.error("ERROR : {} ({})", e.getErrorCode().getMessage(), e.getErrorCode().getCode());
-            throw e;
         } catch (Exception e) {
             com.T82.common_exception.exception.CustomException customException = new com.T82.common_exception.exception.CustomException(handleException.value(), e);
             log.error("ERROR : {} ({})", customException.getErrorCode().getMessage(), customException.getErrorCode().getCode());
