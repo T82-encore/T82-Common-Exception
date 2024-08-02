@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 public enum ErrorCode {
     /**
-     * ******************************* Global Error CodeList ***************************************
+     * ******************************* Coupon Error CodeList ***************************************
      * HTTP Status Code
      * 400 : Bad Request
      * 401 : Unauthorized
