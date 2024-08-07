@@ -14,11 +14,9 @@ public class CustomException extends RuntimeException {
         super(errorCode.getMessage(), cause);
         this.errorCode = errorCode;
     }
-
     public HttpStatus getHttpStatus() {
         return errorCode.getHttpStatus();
     }
-
     public String getCode() {
         return errorCode.getCode();
     }
