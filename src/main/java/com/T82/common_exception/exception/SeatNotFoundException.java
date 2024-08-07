@@ -1,7 +1,10 @@
 package com.T82.common_exception.exception;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+@CrossOrigin()
 public class SeatNotFoundException extends CustomException{
     public SeatNotFoundException() {
-        super(ErrorCode.MIN_PURCHASE_NOT_ACCEPTED);
+        super(ErrorCode.SEAT_NOT_FOUND);
     }
 }
