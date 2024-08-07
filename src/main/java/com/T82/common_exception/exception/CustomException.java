@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
-import java.util.function.Supplier;
 
 @Getter
 @AllArgsConstructor
@@ -22,9 +21,5 @@ public class CustomException extends RuntimeException {
 
     public String getCode() {
         return errorCode.getCode();
-    }
-
-    public static Supplier<CustomException> withErrorCode(ErrorCode errorCode) {
-        return () -> new CustomException(errorCode);
     }
 }
