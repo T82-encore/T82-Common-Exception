@@ -1,5 +1,6 @@
 package com.T82.common_exception.aspect;
 
+import com.T82.common_exception.annotation.ExecutionTimeLog;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -11,8 +12,8 @@ import org.springframework.util.StopWatch;
 @Component
 @Aspect
 public class LogAspect {
-    @Around("@annotation(com.T82.common_exception.annotation.ExecutionTimeLog)")
-    public Object ExecutionTimeLog(ProceedingJoinPoint joinPoint) throws Throwable{
+    @Around("@annotation(executionTimeLog)")
+    public Object ExecutionTimeLog(ProceedingJoinPoint joinPoint, ExecutionTimeLog executionTimeLog) throws Throwable{
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
 
