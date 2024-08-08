@@ -11,7 +11,7 @@ import org.springframework.util.StopWatch;
 @Component
 @Aspect
 public class LogAspect {
-    @Around("@annotation(ExecutionTimeLog)")
+    @Around("@annotation(com.T82.common_exception.annotation.ExecutionTimeLog)")
     public Object ExecutionTimeLog(ProceedingJoinPoint joinPoint) throws Throwable{
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
