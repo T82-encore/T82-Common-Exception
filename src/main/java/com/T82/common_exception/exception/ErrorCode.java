@@ -60,6 +60,10 @@ public enum ErrorCode {
     EVENT_NOT_FOUND(HttpStatus.NOT_FOUND, "SEAT-002", "해당 이벤트를 찾을 수 없습니다."),
     EVENT_PLACE_NOT_FOUND(HttpStatus.NOT_FOUND, "SEAT-003", "해당 장소를 찾을 수 없습니다."),
     SECTION_NOT_FOUND(HttpStatus.NOT_FOUND, "SEAT-004", "해당 구역을 찾을 수 없습니다."),
+    SEAT_NOT_FOUND(HttpStatus.NOT_FOUND, "SEAT-005", "해당 좌석을 찾을 수 없습니다."),
+    SEAT_ALREADY_CHOSEN(HttpStatus.BAD_REQUEST, "SEAT-006", "이미 예약된 좌석입니다."),
+    MAX_AVAILABLE_SEATS_EXCEEDED(HttpStatus.BAD_REQUEST, "SEAT-007", "예매 가능한 좌석의 수는 최대 5개 입니다."),
+
 
     /**
      * CATEGORY
