@@ -40,11 +40,18 @@ public enum ErrorCode {
      */
     NOT_FOUND_TICKET(HttpStatus.NOT_FOUND, "TICKET-001", "티켓을 찾을 수 없습니다."),
     FAILED_GENERATE_TICKET(HttpStatus.INTERNAL_SERVER_ERROR, "TICKET-003", "티켓 생성에 실패했습니다."),
+    FAILED_REFUND_TICKET(HttpStatus.INTERNAL_SERVER_ERROR, "TICKET-001", "티켓 환불에 실패했습니다."),
 
     /**
-     * REFUND
+     * PAYMENT
      */
-    FAILED_REFUND_TICKET(HttpStatus.INTERNAL_SERVER_ERROR, "REFUND-001", "티켓 환불에 실패했습니다."),
+    PAYMENTLOG_NOT_FOUND(HttpStatus.NOT_FOUND, "PAYMENT-001", "결제로그를 찾을 수 없습니다."),
+
+    /**
+     * DIB
+     */
+    ALREADY_DIB (HttpStatus.BAD_REQUEST, "DIB-001", "이미 찜 상태입니다."),
+
 
     /**
      * SEAT
@@ -57,7 +64,7 @@ public enum ErrorCode {
     /**
      * CATEGORY
      */
-    PARENT_CATEGORY_NOT_FOUND(HttpStatus.NOT_FOUND, "CATEGORY-001", "부모 카테고리를 찾을 수 없습니다."),
+    WRONG_PARENT_CATEGORY (HttpStatus.NOT_FOUND, "CATEGORY-001", "부모 카테고리를 찾을 수 없습니다."),
 
     /**
      * USER
