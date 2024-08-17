@@ -79,12 +79,23 @@ public enum ErrorCode {
     USER_NOT_FOUND(HttpStatus.NOT_FOUND, "USER-004", "존재하지 않는 유저입니다."),
     EMAIL_NOT_FOUND(HttpStatus.NOT_FOUND, "USER-005", "존재하지 않는 이메일입니다."),
     EXPIRED_TOKEN(HttpStatus.UNAUTHORIZED, "USER-006", "토큰이 만료되었습니다."),
+    FAILED_SIGNUP(HttpStatus.BAD_REQUEST, "USER-007", "회원가입을 실패했습니다."),
+    FAILED_LOGIN(HttpStatus.BAD_REQUEST, "USER-008", "로그인을 실패했습니다."),
+    FAILED_TOKEN(HttpStatus.INTERNAL_SERVER_ERROR, "USER-009", "토큰 발급에 실패했습니다."),
+    FAILED_USER_INFO(HttpStatus.INTERNAL_SERVER_ERROR, "USER-010", "유저 정보 불러오기를 실패했습니다."),
+    FAILED_UPDATE_USER(HttpStatus.INTERNAL_SERVER_ERROR, "USER-011", "유저 업데이트 작업에 실패했습니다."),
+    FAILED_DELETE_USER(HttpStatus.INTERNAL_SERVER_ERROR, "USER-012", "유저 삭제 작업에 실패했습니다."),
+    FAILED_SEND_DEVICE(HttpStatus.INTERNAL_SERVER_ERROR, "USER-013", "디바이스 토큰 전송 작업에 실패했습니다."),
+
 
     /**
      * REVIEW
      */
     DUPLICATE_REVIEW(HttpStatus.BAD_REQUEST, "REVIEW-001", "이미 존재하는 리뷰입니다."),
     REVIEW_NOT_FOUND(HttpStatus.NOT_FOUND, "REVIEW-002", "리뷰가 존재하지 않습니다."),
+    FAILED_CREATE_REVIEW(HttpStatus.INTERNAL_SERVER_ERROR, "REVIEW-003", "리뷰 생성에 실패했습니다."),
+    FAILED_GET_REVIEW(HttpStatus.INTERNAL_SERVER_ERROR, "REVIEW-004", "리뷰 불러오기를 실패했습니다."),
+    FAILED_DELETE_REVIEW(HttpStatus.INTERNAL_SERVER_ERROR, "REVIEW-005", "리뷰 삭제에 실패했습니다."),
 
     /**
      * UPLOAD
